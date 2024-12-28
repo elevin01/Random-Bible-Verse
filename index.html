@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IGC church promise verses</title>
+    <title>IGC Church Promise Verse</title>
     <style>
         body {
             margin: 0;
@@ -55,17 +55,30 @@
         button:hover {
             background-color: #0056b3;
         }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: #f8f9fa;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
     </style>
 </head>
 <body>
     <div class="verse" id="englishVerse"></div>
-    <div class=telugu id="teluguVerse"></div>
+    <div class="telugu" id="teluguVerse"></div>
 
     <label class="toggle">
         <input type="checkbox" id="toggleTelugu" checked> Show Telugu
     </label>
 
-    <a href="#" target="_blank" id="bibleLink" class=link>Go to Passage</a>
+    <footer>
+        <p>&copy; 2024 IGC Church </p>
+    </footer>
 
     <script>
         const verses = [
@@ -367,7 +380,6 @@
 
             document.getElementById('englishVerse').textContent = verse.english;
             document.getElementById('teluguVerse').textContent = verse.telugu;
-            document.getElementById('bibleLink').href = verse.link;
 
             changeBackgroundColor();
         }
